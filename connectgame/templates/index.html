@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Connect Four Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="col-md-8 offset-md-2" style="position:absolute;top:100px;">
+        <h1 class='display_4 text-white font-weight-bolder'>WELCOME TO CONNECT FOUR GAME</h1><br>
+        <form action="{% url 'game' %}" method="post">
+          {% csrf_token %}
+
+          <div class="form-group">
+            <label for="username" class="text-white font-weight-bold">Player Name: </label>
+            <input type="text" id="username" class="form-control" name="username" placeholder="Enter your name" required><br>
+          </div>
+
+          <div class="form-group">
+            <label for="gameid" class="text-white font-weight-bold">Room Code :</label>
+            <input type="text" id="gameid" class="form-control" name="gameid" value="150"><br>
+          </div>
+
+          <button type="submit" class="btn btn-danger font-weight-bolder ">ENTER</button>
+        </form>
+      </div>
+    </div>
+  </body>
+
+  <script src="{% static 'three.r95.min.js'%}" charset="utf-8"></script>
+  <script src="{% static 'vanta.waves.min.js'%}" charset="utf-8"></script>
+
+  <script>
+  VANTA.WAVES({
+    el: "body",
+    mouseControls: true,
+    touchControls: true,
+    minHeight: 670,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00
+  })
+  </script>
+
+</html>

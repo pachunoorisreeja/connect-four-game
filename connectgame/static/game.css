@@ -1,0 +1,12 @@
+input[type='button']{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border:2px solid black;
+}
+#mymove{
+  display:None;
+}
+body{
+  background-color: #DBD7D7;
+}

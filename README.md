@@ -1,8 +1,9 @@
 # connect-four-game
-A real time & turn based strategy game with multiplayer support.
-<br>Modified the original game, such that few tic-tac-toe functionalities are added. The major/only change shall be user can insert coin at any position rather than column-wise fashion(as in original game).
+Real time and Turn based strategy game with multiplayer support.
+<br>Modified the original game, such as few tic-tac-toe functionalities are added. The major/only change shall be user can insert coin at any position rather than column-wise insertion (as in original game).
+
 <br>Check out original game [here](https://en.wikipedia.org/wiki/Connect_Four).
-<br>Docker can be used.
+
 
 ## Installations
 ```bash
